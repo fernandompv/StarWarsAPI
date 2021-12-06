@@ -1,10 +1,9 @@
 package com.project.starwars.StarWar.Model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Planet")
 public class Planet{
 
     @Id
