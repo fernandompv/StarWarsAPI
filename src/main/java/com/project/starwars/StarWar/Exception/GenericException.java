@@ -11,9 +11,6 @@ public class GenericException{
         this.errorMessage = errorMessage;
     }
 
-    public GenericException() {
-    }
-
     public String getErrorCode() {
         return errorCode;
     }
