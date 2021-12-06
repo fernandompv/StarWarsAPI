@@ -2,37 +2,37 @@ package com.project.starwars.StarWar.Response;
 
 import java.util.ArrayList;
 
-public class Response<T> {
+public class GenericResponse<T>{
     private String status;
-    private ArrayList<ExceptionDTO> error;
+    private ArrayList<Exception> error;
     private T data;
     public static final String SuccessMessage = "success";
     public static final String FailMessage = "fail";
 
-    public Response() {
+    public GenericResponse( ) {
     }
 
-    public Response(String status, ArrayList<ExceptionDTO> error, T data) {
+    public GenericResponse(String status, ArrayList<Exception> error, T data) {
         this.status = status;
         this.error = error;
         this.data = data;
     }
 
-    public Response(ExceptionDTO error) {
+    public GenericResponse(Exception error) {
         this.status = "fail";
-        ArrayList<ExceptionDTO> oneException = new ArrayList();
+        ArrayList<Exception> oneException = new ArrayList();
         oneException.add(error);
         this.error = oneException;
         this.data = null;
     }
 
-    public Response(T data) {
+    public GenericResponse(T data) {
         this.status = "success";
         this.error = null;
         this.data = data;
     }
 
-    public Response(boolean statusResponse) {
+    public GenericResponse(boolean statusResponse) {
         if (statusResponse) {
             this.status = "success";
         } else {
@@ -42,7 +42,7 @@ public class Response<T> {
         this.data = null;
     }
 
-    public String getStatus() {
+    public String getStatus( ) {
         return this.status;
     }
 
@@ -50,15 +50,15 @@ public class Response<T> {
         this.status = status;
     }
 
-    public ArrayList<ExceptionDTO> getError() {
+    public ArrayList<Exception> getError( ) {
         return this.error;
     }
 
-    public void setError(ArrayList<ExceptionDTO> error) {
+    public void setError(ArrayList<Exception> error) {
         this.error = error;
     }
 
-    public T getData() {
+    public T getData( ) {
         return this.data;
     }
 
@@ -66,7 +66,8 @@ public class Response<T> {
         this.data = data;
     }
 
-    public String toString() {
+    public String toString( ) {
         return "{\"ResponseDTO\":{\"status\":\"" + this.status + "\", \"error\":" + this.error + ", \"data\":" + this.data + "}}";
     }
+}
 
