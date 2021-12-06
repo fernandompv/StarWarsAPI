@@ -1,4 +1,4 @@
-package com.project.starwars.StarWar.Config;
+package com.project.StarWar.Config;
 
 import com.google.common.collect.Lists;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
