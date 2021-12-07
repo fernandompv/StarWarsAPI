@@ -1,11 +1,8 @@
 package com.project.StarWar.Contexts.Missions.Model;
 
-import com.project.StarWar.Contexts.Missions.Model.Mission;
 import com.project.StarWar.Contexts.connection.H2DatabaseConnection;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

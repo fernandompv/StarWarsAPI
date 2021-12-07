@@ -5,7 +5,6 @@ import com.project.StarWar.Contexts.connection.Swapiconnection;
 
 import javax.persistence.*;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 
 @Entity

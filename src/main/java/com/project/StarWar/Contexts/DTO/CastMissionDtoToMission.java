@@ -9,8 +9,8 @@ import com.project.StarWar.Contexts.Missions.Model.Starship;
 import com.project.StarWar.Contexts.connection.Swapiconnection;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 public class CastMissionDtoToMission{
@@ -21,8 +21,7 @@ public class CastMissionDtoToMission{
         List<Planet> planets = castPlanetsFromJson(castStringJsonToObject(swapiconnection.search(Constants.SWAPI_SEARCH_PLANET,dto.getPlanet())));
         List<Captain> captains = castCaptainsFromJson(castStringJsonToObject(swapiconnection.search(Constants.SWAPI_SEARCH_PEOPLE,dto.getCaptain())));
         List<Starship> starships = castStarshipsFromJson(castStringJsonToObject(swapiconnection.search(Constants.SWAPI_SEARCH_STARSHIP, Collections.singletonList(dto.getStarship()))));
-
-        Mission
+        return new Mission(dto.getStartDate(),starships.get(0),new HashSet<>(captains),new HashSet<>(planets));
     }
 
     public List<Object> castStringJsonToObject(List<StringBuilder> multipleJson){
