@@ -3,12 +3,20 @@ package com.project.StarWar.Contexts.Missions.Model;
 import com.project.StarWar.Contexts.Missions.Model.ValueObjects.AditionalCrew;
 import com.project.StarWar.Contexts.Missions.Model.ValueObjects.Crew;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Set;
 
+@Entity
+@Table (name = "Starship")
 public class Starship{
 
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String name;
