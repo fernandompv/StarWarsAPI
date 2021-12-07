@@ -1,6 +1,7 @@
 package com.project.StarWar.Contexts.Missions.Model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -43,6 +44,14 @@ public class Mission{
 
     public boolean validateIfStartDateExist(){
         return !this.startDate.isEmpty();
+    }
+
+    public boolean validateIfTheCaptainAddinToAditionalCrewAreHiguerOrEqualsThanRequiredCrew(){
+        return starship.getAditionalCrew().getNumberOfAditionalCrew().add(BigDecimal.valueOf(captains.size())).compareTo(starship.getCrew().getNumber()) >= 0;
+    }
+
+    public boolean validateIfTheCaptainAddinToAditionalCrewAreAreLessOrEqualsThanTheAddinOfPassengerWithTheCrew(){
+        return starship.getAditionalCrew().getNumberOfAditionalCrew().add(BigDecimal.valueOf(captains.size())).compareTo(starship.getCrew().getNumber().add(starship.getPassengers())) <= 0;
     }
 
     public String getStartDate( ) {

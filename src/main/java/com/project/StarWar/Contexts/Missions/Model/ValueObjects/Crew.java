@@ -4,24 +4,25 @@ import java.math.BigDecimal;
 
 public class Crew{
 
-    private BigDecimal numberOfCrew;
+    private BigDecimal number;
+
 
     public Crew( ) {
     }
 
-    public Crew(BigDecimal numberOfCrew) {
-        this.numberOfCrew = numberOfCrew;
+    public Crew(BigDecimal number) {
+        this.number = number;
     }
 
     private boolean isValidCrew(){
-        return numberOfCrew.compareTo(BigDecimal.ZERO) >= 0;
+        return number.compareTo(BigDecimal.ZERO) >= 0;
     }
 
-    public BigDecimal getNumberOfCrew( ) {
-        return numberOfCrew;
+    public BigDecimal getNumber( ) {
+        return number;
     }
 
-    public void setNumberOfCrew(BigDecimal numberOfCrew) {
-        this.numberOfCrew = numberOfCrew;
+    public void setNumber(BigDecimal number) {
+        this.number = number;
     }
 }

@@ -1,6 +1,8 @@
 package com.project.StarWar.Contexts.Missions.Controller;
 
 import com.project.StarWar.Contexts.Constants;
+import com.project.StarWar.Contexts.DTO.CastMissionDtoToMission;
+import com.project.StarWar.Contexts.DTO.MissionDTO;
 import com.project.StarWar.Contexts.Missions.Model.Mission;
 import com.project.StarWar.Contexts.Missions.Repository.MissionRepository;
 import com.project.StarWar.Contexts.Response.GenericResponse;
@@ -20,13 +22,11 @@ public class MissionController{
     @Autowired
     private MissionRepository missionRepository;
 
-    @Autowired
-    RestTemplate restTemplate;
-
 
     @RequestMapping( method = RequestMethod.POST, value = Constants.MISSIONS)
-    public ResponseEntity<GenericResponse> getDailyMarketAlgorithms(@RequestBody Mission mission){
-        String result = attemptedSavePetition(mission);
+    public ResponseEntity<GenericResponse> getDailyMarketAlgorithms(@RequestBody MissionDTO dtoMission){
+        CastMissionDtoToMission cating = new CastMissionDtoToMission();
+        String result = attemptedSavePetition(cating.cast(dtoMission));
         GenericResponse response = new GenericResponse(GenericResponse.SuccessMessage, null);;
 
         if(!result.equals("OK"))

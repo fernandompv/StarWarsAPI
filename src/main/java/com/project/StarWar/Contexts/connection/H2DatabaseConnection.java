@@ -19,10 +19,8 @@ public class H2DatabaseConnection{
 
 
     public ResultSet execQuery(PreparedStatement statement){
-        PreparedStatement statement;
         ResultSet rs;
         try {
-            statement = connection.prepareStatement(query);
             rs = statement.executeQuery();
             return rs;
         } catch (SQLException e) {

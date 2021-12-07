@@ -4,6 +4,7 @@ import com.project.StarWar.Contexts.Missions.Model.Mission;
 import com.project.StarWar.Contexts.connection.H2DatabaseConnection;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -33,7 +34,16 @@ public class Captain{
     }
 
     public boolean isActiveMissionForthisCaptain(){
-        return true;
+        H2DatabaseConnection db = new H2DatabaseConnection();
+        List<String> parameters = new ArrayList<>();
+        parameters.add(name);
+        try {
+            return !db.execQuery(db.createStatementForQuery("SELECT * FROM MISSION WHERE Captain = ?",parameters)).getString("active").isEmpty();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return false;
     }
 
     public void validateIfExist(){

@@ -1,5 +1,6 @@
 package com.project.StarWar.Contexts.Missions.Model;
 
+import com.project.StarWar.Contexts.Missions.Model.ValueObjects.AditionalCrew;
 import com.project.StarWar.Contexts.Missions.Model.ValueObjects.Crew;
 
 import java.io.IOException;
@@ -17,6 +18,8 @@ public class Starship{
     private Set<String> pilots;
 
     private Crew crew;
+
+    private AditionalCrew aditionalCrew;
 
     public Starship( ) {
         //El framework requiere un constructor sin parametros pero no lo considero una buen apractica por tanto no se debe usar
@@ -38,10 +41,6 @@ public class Starship{
         this.name = name;
     }
 
-    public Crew getCrew( ) {return crew;}
-
-    public void setCrew(Crew crew) {this.crew = crew;}
-
     public BigDecimal getPassengers( ) {
         return passengers;
     }
@@ -56,5 +55,21 @@ public class Starship{
 
     public void setPilots(Set<String> pilots) {
         this.pilots = pilots;
+    }
+
+    public Crew getCrew( ) {
+        return crew;
+    }
+
+    public void setCrew(Crew crew) {
+        this.crew = crew;
+    }
+
+    public AditionalCrew getAditionalCrew( ) {
+        return aditionalCrew;
+    }
+
+    public void setAditionalCrew(AditionalCrew aditionalCrew) {
+        this.aditionalCrew = aditionalCrew;
     }
 }

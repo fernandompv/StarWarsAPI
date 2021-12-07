@@ -5,6 +5,8 @@ import com.project.StarWar.Contexts.connection.Swapiconnection;
 
 import javax.persistence.*;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
 
 @Entity
 @Table(name = "Planet")
@@ -25,7 +27,8 @@ public class Planet{
     }
 
     private boolean isCorrectPlanet() throws IOException {
-        return Swapiconnection.search(Constants.SWAPI_SEARCH_PLANET,name) != null;
+        Swapiconnection swapiconnection = new Swapiconnection();
+        return swapiconnection.search(Constants.SWAPI_SEARCH_PLANET, Collections.singletonList(name)) != null;
     }
 
     public Planet(Mission mission) {
