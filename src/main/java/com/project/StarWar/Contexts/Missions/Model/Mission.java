@@ -28,6 +28,8 @@ public class Mission{
     )
     private Set<Planet> planets = new HashSet<>();
 
+    private String active;
+
     public Mission( ) {
         //El framework requiere un constructor sin parametros pero no lo considero una buen apractica por tanto no se debe usar
     }
@@ -74,4 +76,8 @@ public class Mission{
     public void setPlanets(Set<Planet> planets) {
         this.planets = planets;
     }
+
+    public String getActive( ) {return active;}
+
+    public void setActive(String active) {this.active = active;}
 }

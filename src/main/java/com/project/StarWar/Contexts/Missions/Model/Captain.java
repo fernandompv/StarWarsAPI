@@ -1,8 +1,13 @@
 package com.project.StarWar.Contexts.Missions.Model;
 
 import com.project.StarWar.Contexts.Missions.Model.Mission;
+import com.project.StarWar.Contexts.connection.H2DatabaseConnection;
 
 import javax.persistence.*;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "Captain")
@@ -25,6 +30,10 @@ public class Captain{
     public Captain(String name, Mission mission) {
         this.name = name;
         this.mission = mission;
+    }
+
+    public boolean isActiveMissionForthisCaptain(){
+        return true;
     }
 
     public void validateIfExist(){

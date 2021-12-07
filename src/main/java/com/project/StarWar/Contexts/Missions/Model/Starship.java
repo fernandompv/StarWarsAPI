@@ -1,16 +1,20 @@
 package com.project.StarWar.Contexts.Missions.Model;
 
-import com.project.StarWar.Contexts.Constants;
 import com.project.StarWar.Contexts.Missions.Model.ValueObjects.Crew;
-import com.project.StarWar.Contexts.connection.Swapiconnection;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.Set;
 
 public class Starship{
 
     private Long id;
 
     private String name;
+
+    private BigDecimal passengers;
+
+    private Set<String> pilots;
 
     private Crew crew;
 
@@ -19,7 +23,7 @@ public class Starship{
     }
 
     private boolean isCorrectStarship() throws IOException {
-        return Swapiconnection.search(Constants.SWAPI_SEARCH_STARSHIP,name) != null;
+        return !name.isEmpty();
     }
 
     public Starship(String name) {
@@ -37,4 +41,20 @@ public class Starship{
     public Crew getCrew( ) {return crew;}
 
     public void setCrew(Crew crew) {this.crew = crew;}
+
+    public BigDecimal getPassengers( ) {
+        return passengers;
+    }
+
+    public void setPassengers(BigDecimal passengers) {
+        this.passengers = passengers;
+    }
+
+    public Set<String> getPilots( ) {
+        return pilots;
+    }
+
+    public void setPilots(Set<String> pilots) {
+        this.pilots = pilots;
+    }
 }
