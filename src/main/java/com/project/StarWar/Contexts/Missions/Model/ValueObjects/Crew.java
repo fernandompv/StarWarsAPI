@@ -1,5 +1,7 @@
 package com.project.StarWar.Contexts.Missions.Model.ValueObjects;
 
+import com.sun.beans.decoder.ValueObject;
+
 import java.math.BigDecimal;
 
 public class Crew{
@@ -24,5 +26,12 @@ public class Crew{
 
     public void setNumber(BigDecimal number) {
         this.number = number;
+    }
+
+    @Override
+    public String toString( ) {
+        return "Crew{" +
+                "number=" + number +
+                '}';
     }
 }

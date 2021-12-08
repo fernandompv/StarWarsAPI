@@ -1,5 +1,8 @@
 package com.project.StarWar.Contexts.Missions.Model;
 
+import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.AdditionalCrewConverter;
+import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.StarshipConverter;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -13,6 +16,8 @@ public class Mission{
     @GeneratedValue
     private Long id;
     private String startDate;
+
+    @Convert(converter = StarshipConverter.class)
     private Starship starship;
 
     @OneToMany(

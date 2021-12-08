@@ -24,4 +24,11 @@ public class AditionalCrew{
     public void setNumberOfAditionalCrew(BigDecimal numberOfAditionalCrew) {
         this.numberOfAditionalCrew = numberOfAditionalCrew;
     }
+
+    @Override
+    public String toString( ) {
+        return "AditionalCrew{" +
+                "numberOfAditionalCrew=" + numberOfAditionalCrew +
+                '}';
+    }
 }

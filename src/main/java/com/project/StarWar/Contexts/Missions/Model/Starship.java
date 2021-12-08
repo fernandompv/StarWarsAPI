@@ -2,11 +2,10 @@ package com.project.StarWar.Contexts.Missions.Model;
 
 import com.project.StarWar.Contexts.Missions.Model.ValueObjects.AditionalCrew;
 import com.project.StarWar.Contexts.Missions.Model.ValueObjects.Crew;
+import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.AdditionalCrewConverter;
+import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.CrewConverter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Set;
@@ -23,10 +22,13 @@ public class Starship{
 
     private BigDecimal passengers;
 
+    @ElementCollection
     private Set<String> pilots;
 
+    @Convert (converter = CrewConverter.class)
     private Crew crew;
 
+    @Convert(converter = AdditionalCrewConverter.class)
     private AditionalCrew aditionalCrew;
 
     public Starship( ) {
