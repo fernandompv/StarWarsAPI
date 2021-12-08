@@ -1,12 +1,12 @@
-package com.project.StarWar.Contexts.DTO;
+package com.project.StarWar.DTO;
 
 import com.google.gson.Gson;
-import com.project.StarWar.Contexts.Constants;
-import com.project.StarWar.Contexts.Missions.Model.Captain;
-import com.project.StarWar.Contexts.Missions.Model.Mission;
-import com.project.StarWar.Contexts.Missions.Model.Planet;
-import com.project.StarWar.Contexts.Missions.Model.Starship;
-import com.project.StarWar.Contexts.connection.Swapiconnection;
+import com.project.StarWar.Constants;
+import com.project.StarWar.Model.Captain;
+import com.project.StarWar.Model.Mission;
+import com.project.StarWar.Model.Planet;
+import com.project.StarWar.Model.Starship;
+import com.project.StarWar.connection.Swapiconnection;
 
 import java.util.ArrayList;
 import java.util.Collections;

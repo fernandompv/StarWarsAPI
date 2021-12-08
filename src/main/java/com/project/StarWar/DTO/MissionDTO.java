@@ -1,4 +1,4 @@
-package com.project.StarWar.Contexts.DTO;
+package com.project.StarWar.DTO;
 
 import java.util.List;
 

@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 @SpringBootApplication
-@ComponentScan("com.project.StarWar.Contexts.Missions")
 public class StarWarApplication {
 
 	public static void main(String[] args) {

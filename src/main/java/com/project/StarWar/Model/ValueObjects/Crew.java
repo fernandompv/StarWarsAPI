@@ -1,4 +1,4 @@
-package com.project.StarWar.Contexts.Missions.Model.ValueObjects;
+package com.project.StarWar.Model.ValueObjects;
 
 import com.sun.beans.decoder.ValueObject;
 

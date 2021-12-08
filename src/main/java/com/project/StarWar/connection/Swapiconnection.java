@@ -1,4 +1,4 @@
-package com.project.StarWar.Contexts.connection;
+package com.project.StarWar.connection;
 
 import java.io.BufferedReader;
 import java.io.IOException;

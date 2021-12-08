@@ -1,4 +1,4 @@
-package com.project.StarWar.Contexts.Response;
+package com.project.StarWar.Response;
 
 public class GenericResponse{
     private String status;

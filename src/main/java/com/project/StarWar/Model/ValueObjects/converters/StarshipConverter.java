@@ -1,11 +1,9 @@
-package com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters;
+package com.project.StarWar.Model.ValueObjects.converters;
 
-import com.project.StarWar.Contexts.Missions.Model.Starship;
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.Crew;
+import com.project.StarWar.Model.Starship;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
-import java.math.BigDecimal;
 
 @Converter
 public class StarshipConverter implements AttributeConverter<Starship, String>{

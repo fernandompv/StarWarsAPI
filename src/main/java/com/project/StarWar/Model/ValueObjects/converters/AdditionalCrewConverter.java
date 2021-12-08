@@ -1,6 +1,6 @@
-package com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters;
+package com.project.StarWar.Model.ValueObjects.converters;
 
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.AditionalCrew;
+import com.project.StarWar.Model.ValueObjects.AditionalCrew;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

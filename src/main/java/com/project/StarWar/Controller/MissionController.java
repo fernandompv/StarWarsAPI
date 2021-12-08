@@ -1,11 +1,11 @@
-package com.project.StarWar.Contexts.Missions.Controller;
+package com.project.StarWar.Controller;
 
-import com.project.StarWar.Contexts.Constants;
-import com.project.StarWar.Contexts.DTO.CastMissionDtoToMission;
-import com.project.StarWar.Contexts.DTO.MissionDTO;
-import com.project.StarWar.Contexts.Missions.Model.Mission;
-import com.project.StarWar.Contexts.Missions.Repository.MissionRepository;
-import com.project.StarWar.Contexts.Response.GenericResponse;
+import com.project.StarWar.Constants;
+import com.project.StarWar.DTO.CastMissionDtoToMission;
+import com.project.StarWar.DTO.MissionDTO;
+import com.project.StarWar.Model.Mission;
+import com.project.StarWar.Repository.MissionRepository;
+import com.project.StarWar.Response.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

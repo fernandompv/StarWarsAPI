@@ -1,6 +1,6 @@
-package com.project.StarWar.Contexts.Missions.Model;
+package com.project.StarWar.Model;
 
-import com.project.StarWar.Contexts.connection.H2DatabaseConnection;
+import com.project.StarWar.connection.H2DatabaseConnection;
 
 import javax.persistence.*;
 import java.sql.SQLException;

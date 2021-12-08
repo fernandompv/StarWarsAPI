@@ -1,4 +1,4 @@
-package com.project.StarWar.Contexts.Exception;
+package com.project.StarWar.Exception;
 
 public class GenericException{
 

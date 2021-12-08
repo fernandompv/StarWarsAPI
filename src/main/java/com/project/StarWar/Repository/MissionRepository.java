@@ -1,6 +1,6 @@
-package com.project.StarWar.Contexts.Missions.Repository;
+package com.project.StarWar.Repository;
 
-import com.project.StarWar.Contexts.Missions.Model.Mission;
+import com.project.StarWar.Model.Mission;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

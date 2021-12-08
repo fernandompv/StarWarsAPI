@@ -1,7 +1,7 @@
-package com.project.StarWar.Contexts.Missions.Model;
+package com.project.StarWar.Model;
 
-import com.project.StarWar.Contexts.Constants;
-import com.project.StarWar.Contexts.connection.Swapiconnection;
+import com.project.StarWar.Constants;
+import com.project.StarWar.connection.Swapiconnection;
 
 import javax.persistence.*;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.project.StarWar.Contexts;
+package com.project.StarWar;
 
 public class Constants{
 

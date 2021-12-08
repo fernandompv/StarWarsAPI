@@ -1,9 +1,9 @@
-package com.project.StarWar.Contexts.Missions.Model;
+package com.project.StarWar.Model;
 
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.AditionalCrew;
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.Crew;
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.AdditionalCrewConverter;
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.CrewConverter;
+import com.project.StarWar.Model.ValueObjects.AditionalCrew;
+import com.project.StarWar.Model.ValueObjects.Crew;
+import com.project.StarWar.Model.ValueObjects.converters.AdditionalCrewConverter;
+import com.project.StarWar.Model.ValueObjects.converters.CrewConverter;
 
 import javax.persistence.*;
 import java.io.IOException;

@@ -1,7 +1,6 @@
-package com.project.StarWar.Contexts.Missions.Model;
+package com.project.StarWar.Model;
 
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.AdditionalCrewConverter;
-import com.project.StarWar.Contexts.Missions.Model.ValueObjects.converters.StarshipConverter;
+import com.project.StarWar.Model.ValueObjects.converters.StarshipConverter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
